@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+<link href="{% static 'blog/css/forms.css' %}" rel="stylesheet" />
+<link href="{% static 'blog/css/detail.css' %}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block content %}
+
+    <form class="margin-div-detail-card" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <p>{{ form.as_p }}</p>
+        <input type="submit" value="Submit">
+        
+    </form>
+
+{% endblock %}

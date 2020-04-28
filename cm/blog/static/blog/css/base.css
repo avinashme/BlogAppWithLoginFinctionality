@@ -1,0 +1,169 @@
+
+body {
+    margin: 0px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    
+    border: 0.5px solid rgb(224, 219, 219);
+    font-family: Raleway, sans-serif;
+    box-shadow: 2px -3px 11px;
+    box-sizing: border-box;
+    position: fixed;
+    
+}
+
+/*  Top-left Section */
+
+#header-left{
+    display: flex;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+
+#header-left a {
+    margin: 10px 0px 10px 50px;
+    text-decoration: none;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#top-bar-categorie ul{
+    list-style: none;
+
+}
+
+#top-bar-categorie ul li{
+    display: block;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    text-align: left;
+    line-height: 40px;
+   
+}
+
+#top-bar-categorie ul li:hover{
+    background-color:#F2F6FF;
+    color: blue;    
+}
+
+#top-bar-categorie ul li ul li {
+    display: none;
+}
+
+#top-bar-categorie ul li:hover ul li {
+    display: block;
+    color: blue;
+    
+} 
+
+#header-left h1{
+    display: inline;
+    color: blue; 
+    font-weight: 900;
+    
+}
+
+#stories {
+    margin: 0px 0px 0px 50px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+/* Top-Right Section */
+
+
+#header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;  
+}
+
+#search-div {
+    margin-right: 20px;    
+}
+
+#search-box {
+    border: 1px solid grey;
+    padding: 8px 15px ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#button {
+    border: 1px solid grey;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: white;
+    margin-left: -5px;
+    background: white;
+
+}
+
+#button:hover {
+    background: rgb(68, 68, 236);
+    border: 1px solid rgb(68, 68, 236);
+    color: white;
+}
+
+
+#header-right a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    
+}
+
+#signup:hover{
+    color: blue;
+}
+
+#login:hover{
+    color: blue;
+}
+
+
+/* ###################################################################################################### */
+
+
+/* mid-section of page */
+
+#mid-section {
+    background: #F2F6FF;
+    font-family: sans-serif;
+    margin-top: 80px;
+
+}
+
+#mid-section-content {
+    margin: 0px 199px 0px 228px;
+    padding: 50px 0px;
+    
+}
+
+
+
+/* ####################################################################################################### */
+
+
+/* Bottom Sectio */
+
+#footer-div {
+    background: #172146;
+    border: 1px solid #172146;
+    margin-top: 0px;
+    padding:50px
+}

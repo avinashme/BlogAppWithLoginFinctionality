@@ -1,0 +1,106 @@
+.margin-div-detail-card{
+    padding:50px 310px;
+    margin: 0px;
+}
+
+.detail-card{
+    width: 700px;
+    border: 1px solid blue;
+    background: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius:8px;
+}
+
+#detail-card-img {
+    width: 100%;
+    border-top-right-radius: 8px;
+    border-top-left-radius:8px;
+}
+
+
+.detail-card-all-text{
+    margin:0px 82px 82px 82px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.detail-card-author{
+    color: #0096FF;
+    font-style: italic;
+}
+.detail-card-date{
+    color: black;
+    
+}
+.detail-card-para {
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    margin: 0px;
+}
+.detail-h4{
+    margin: 20px 0px;
+    text-decoration: underline;
+}
+.detail-blank-para{
+    margin: 15px;
+    visibility: hidden;
+
+}
+.detail-blue{
+    color: #0096FF;
+}
+
+/* Programming Para */
+
+.detail-card2 {
+    margin-left: 33px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Below the hr line  */
+
+.div-hr{
+    border-top: 1px solid dimgray;
+    margin: 0px;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.image-div-hr{
+    display: inline-block;
+    margin: 0px;
+    padding-top: 30px;
+    padding-left: 100px;
+}
+.p-div-hr{
+    display: inline-block;
+    margin: 0px;
+    
+}
+.p-hr{
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    
+}
+
+.anchor-div{
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+.anchor-button{
+    text-decoration: none;
+
+}
+.button{
+    background: white;
+    border: 1px solid #0096FF;
+    color: #0096FF;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0px 10px 10px 10px;
+    font-size: 15px;
+}

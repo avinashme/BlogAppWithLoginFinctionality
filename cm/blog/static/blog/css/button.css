@@ -1,0 +1,37 @@
+.button-div{
+   
+    
+}
+
+.first-button{
+    color: #ffffff;
+    background: blue;
+    border: 1px solid blue;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 18px;
+   
+}
+
+.buttons{
+    color: blue;
+    background: transparent;
+    border: 1px solid blue;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 6px 14px;
+    margin: 5px;
+    border-radius: 18px;
+   
+}
+
+.anchor{
+    text-decoration: none;
+}
+
+.buttons:hover {
+    background-color: blue;
+    color: white;
+}

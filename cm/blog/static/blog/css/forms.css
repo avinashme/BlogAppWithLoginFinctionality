@@ -1,0 +1,12 @@
+.name-field {
+    margin-left: 0px;
+    border-radius: 8px;
+    border: solid 0.5px rgb(247, 239, 239);
+    padding: 5px;
+}
+
+.errorlist {
+    list-style: none
+}
+
+

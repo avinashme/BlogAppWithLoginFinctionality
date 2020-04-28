@@ -1,0 +1,61 @@
+
+.cards3{
+    margin: 16px 0px;
+}
+
+.card{
+    width: 280px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    display: inline-table;
+    font-family: sans-serif;
+    color: black;
+    background: white;
+    margin: 5px 8px;
+}
+
+.card-image-cover{
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;  
+}
+
+.card-all-text{
+    padding: 11px 24px;
+    margin: 11px auto;
+}
+
+.card-text-heading{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px 0px 8px 0px;
+
+}
+
+.card-author{
+    font-size: 12px;
+    font-weight: 600;
+    font-style: italic;
+    color: #0096ff;
+    margin: 0px;
+    
+}
+
+.card-date{
+    font-size: 12px;
+    font-weight: 400;
+    color: black;
+}
+
+.card-para{
+    font-size: 14px;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.anchorCard{
+    text-decoration: none;
+}
