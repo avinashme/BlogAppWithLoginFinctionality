@@ -1,0 +1,18 @@
+Git Command
+-----------
+
+
+To create new branch in existing repo
+--------------------------------------
+
+1.git branch -> To know the current branch.
+-> git branch -a -> To know all available branch.
+
+2. git checkout -b test_1   -> To create new branch.
+
+3.git add . ->TO add all files
+
+4.git commit -m "your message"
+
+5.git push -u origin test_1 -> To push on remote repo
+
