@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block extra_head %}
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="mid-section-content">
+        <div class="margin-div">
+            <form method="post">{% csrf_token %}
+                <h3>Are you sure ?</h3>
+                <p>You want to delete "{{ post.title }}"?</p>
+                <input type="submit" value="Delete">
+                <input type="button" value="Cancel" onclick="goBack()">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

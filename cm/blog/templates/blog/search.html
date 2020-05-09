@@ -9,6 +9,7 @@
 {% block search %}
     <div id="search-div">
         <form method="GET" action="search" enctype="multipart/form-data">
+           
             <input type="search" id="search-box" name="title" placeholder="Search blog here...">
             <button type="submit" id="button" value="Submit"><i id="search-icon" class="fas fa-search" style="margin: 8px;"></i></button> 
         </form>
@@ -37,7 +38,7 @@
             {% endfor %}
         </div>
 
-     
+        
         <!-- Cards Here -->
         {% if posts %}
             <div class="cards3">
@@ -47,7 +48,7 @@
                             <img class="card-image-cover" src="{{ post.image.url }}" alt="Introduction To A Machine Learning Online Course" />
                             <div class="card-all-text">
                                 <h4 class="card-text-heading">{{ post.title|truncatechars:20 }}</h4>
-                                <p class="card-author">{{ post.author.get_username }} | 
+                                <p class="card-author">{{ post.author }} | 
                                     <span class="card-date">23 Aug 2019</span>
                                 </p>
                                 <p class="card-para">{{ post.content|truncatechars:150 }}</p>

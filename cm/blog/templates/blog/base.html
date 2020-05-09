@@ -30,7 +30,7 @@
     <div id="header">
         <div id="header-left">
             <div>
-                <a href="./" class=""><h1>EDYODA</h1></a>
+                <a href="/blogs" class=""><h1>EDYODA</h1></a>
                 <p id="stories">Stories</p>
             </div>
             <div id="top-bar-categorie">
@@ -53,9 +53,14 @@
             {% endblock %} 
             
             <div>
-                <a href="#" id="signup"><i class="fas fa-sign-in-alt" style="margin-right: 5px;"></i>Signup</i>
-                </a> 
-                <a href="#" id="login"><i class="fas fa-user-circle" style="margin-right: 5px;"></i>Login</a>
+                {% if user.is_authenticated %}
+                    <a href="#">{{ user.get_username }}</a>
+                    <a href="{% url 'logout' %}" id="login">Logout</a>
+
+                {% else %}
+                    <a href="{% url 'signup' %}" id="signup"><i class="fas fa-sign-in-alt" style="margin-right: 5px;"></i>Signup</i></a> 
+                    <a href="{% url 'login' %}" id="login"><i class="fas fa-user-circle" style="margin-right: 5px;"></i>Login</a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -70,13 +75,8 @@
 
     <!-- Footer Section -->
     <div id="footer-div">
-        <h1></h1>
-        
+        <h1></h1>    
     </div>  
-
-    
-
-
 
 </body>
 </html>

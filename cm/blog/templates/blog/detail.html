@@ -8,23 +8,23 @@
 
 {% block content %}
 
-
     <!-- This div section have margin and paddings for cards -->
     <div class="margin-div-detail-card">
-                   
+
         <!-- Cards Here -->
         <div class="detail-card">
-            <img id="detail-card-img"  src="{{ p_detail.image.url }}" alt="Introduction To A Machine Learning Online Course" />
+            <img id="detail-card-img"  src="{{ post.image.url }}" alt="Introduction To A Machine Learning Online Course" />
             <div class="detail-card-all-text">
-                <h1>{{ p_detail.title }}</h1>
-                <p class="detail-card-author">{{ p_detail.author }} | 
+                <h1>{{ post.title }}</h1>
+                <p class="detail-card-author">{{ post.author.get_username }} | 
                     <span class="detail-card-date">23 Aug 2019</span>
                 </p>
-                <p class="detail-card-para"> {{ p_detail.content }} </p>
+                <p class="detail-card-para"> {{ post.content }}</p>
+
+                <p class="detail-card-para"> {{ post.author.user.image }} </p>
+                <p class="detail-card-para"> {{ post.author.user.bio }} </p>
             </div>
-        </div>
+        </div> 
     </div>
-
-
 
 {% endblock %}

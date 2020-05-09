@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block extra_head %}
+    <link href="{% static 'blog/css/card.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<div id="mid-section-content">
+    <div class="margin-div">
+
+        {% if profile %}
+            <p>Name: {{ profile.user.get_username }}</p>
+        
+            <p>Bio: {{ profile.bio }}</p>
+            <img src="{{ profile.image }}" style="width: 200px; height: 200px;" />
+        {% else %}
+            <p>Cannot be able to fetch Profile</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

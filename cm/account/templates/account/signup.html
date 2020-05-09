@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block extra_head %}
+    <link href="{% static 'blog/css/card.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<div id="mid-section-content">
+    <div class="margin-div">
+        <form method="POST">{% csrf_token %}
+           <!-- <p>{{ form.as_p }}</p> -->
+           
+            {% for field in form %}
+            <p>{{ field.errors }}</p>
+            <p>{{ field.label_tag }}{{ field }}</p>
+            <p>{{ field.help_text }} </p>
+            
+       
+    {% endfor %}
+            <input type="submit" value="SignUp">   
+        </form>
+    </div>
+</div>
+
+{% endblock %}
