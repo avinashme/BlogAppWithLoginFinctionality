@@ -5,7 +5,6 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from blog.forms import PostForm
 from django.urls import reverse, reverse_lazy
-
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
@@ -53,108 +52,24 @@ class CategoryListView(ListView):
 
 ###########################################################################################################
 
-class PostFormCreateView(CreateView):
+class PostFormCreateView(LoginRequiredMixin,CreateView):
+    login_url = "login"
     form_class = PostForm
     template_name = 'blog/create_post.html'
 
 
-class PostUpdateView(UpdateView):
+class PostUpdateView(LoginRequiredMixin,UpdateView):
+    login_url = "login"
     model = Post
     form_class = PostForm
     template_name = 'blog/create_post.html'
 
 
-class PostDeleteView(DeleteView):
+class PostDeleteView(LoginRequiredMixin,DeleteView):
+    login_url = "login"
     model = Post
     success_url = "/blogs"
     
-
-
-
-###########################################################################################################
-
-            # Forms Here
-
-###########################################################################################################
-
-
-# def contact_view(request, *args, **kwargs):
-
-#     if request.method == 'GET':
-#         form = ContactUs()
-#         return render(request, "blog/contact.html", context = {"form":form})
-    
-#     else:
-#         form = ContactUs(request.POST)
-#         if form.is_valid():
-#             print(form.cleaned_data)
-#             return HttpResponse("Thank you")
-#         else:
-#             return render(request, "blog/contact.html", context = {"form":form})
- 
-
-
-###########################################################################################################
-###########################################################################################################
-
-
-
-
-
-###########################################################################################################
-
-            # Model Form
-
-###########################################################################################################
-
-# from blog.forms import AddBlog
-
-# def model_form_view(request, *args, **kargs):
-#     form = AddBlog()
-#     if request.method == "GET":
-#         form = AddBlog()
-#         return render(request, 'blog/modelform.html', context = {'form':form})
-
-#     else:
-#         form = AddBlog(request.POST, request.FILES)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponse("Thank you")
-#         else:
-#             return render(request, 'blog/modelform.html', context = {'form':form})
-
-# def post_edit_form_view(request, id, *args, **kwargs):
-#     try:
-#         post = Post.objects.get(id = id)
-#     except:
-#         return HttpResponse("Invalid ID")
-
-#     if request.method == 'GET':
-#         form = AddBlog(instance = post)
-#         return render(request, 'blog/modelform.html', context = {'form':form})
-
-#     else:
-#         form = AddBlog(request.POST, request.FILES, instance = post)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponse("Thank you")
-#         else:   
-#             return render(request, 'blog/modelform.html', context = {'form':form})
-        
-
-
-###########################################################################################################
-###########################################################################################################
-
-
-###########################################################################################################
-###########################################################################################################
-
-
-
-
-
-
 
 
 ###########################################################################################################
@@ -180,33 +95,3 @@ class SearchListView(ListView):
         return context
 
 
-# def search_view(request, *args, **kargs):
-#     if request.method == "GET":
-#         print(request.GET)
-#         return render(request, "blog/index.html")
-        
-#     else:
-#         if request.method == "POST":
-#             print(request.POST)
-#             search = request.POST['title']
-#             posts = Post.objects.filter(title__contains = search)
-#             print(posts)
-#             #posts = Post.objects.filter(author__contains = search)  
-#             return render(request, "blog/index.html", context={'posts':posts})
-#         else:
-#             return HttpResponse("Invalid Blog title")
-
-
-
-###########################################################################################################
-###########################################################################################################
-
-
-
-
-
-###########################################################################################################
-
-            # 
-
-###########################################################################################################

@@ -11,11 +11,21 @@
 <div id="mid-section-content">
     <div class="margin-div">
 
-        {% if profile %}
+        {% if profile.user.is_authenticated %}
             <p>Name: {{ profile.user.get_username }}</p>
-        
             <p>Bio: {{ profile.bio }}</p>
-            <img src="{{ profile.image }}" style="width: 200px; height: 200px;" />
+            <img src="{{ profile.image.url }}" style="width: 200px; height: 200px;" />
+            <div>
+                <h2>Your blogs:</h2>
+                <a href="{% url 'create_post' %}"><input type="button" value="Create"></a>
+                {% for post in posts %}
+                    <p>
+                        <a href="{% url 'detail' post.slug %}">{{ post }}</a>
+                        <a href="{% url 'update' post.slug %}"><input type="button" value="edit"></a>
+                        <a href="{% url 'delete' post.slug %}"><input type="button" value="Delete"></a>
+                    </p>
+                {% endfor %}
+            </div>
         {% else %}
             <p>Cannot be able to fetch Profile</p>
         {% endif %}

@@ -54,7 +54,7 @@
             
             <div>
                 {% if user.is_authenticated %}
-                    <a href="#">{{ user.get_username }}</a>
+                    <a href="{% url 'profile-detail' 2 %}">{{ user.get_username }}</a>
                     <a href="{% url 'logout' %}" id="login">Logout</a>
 
                 {% else %}

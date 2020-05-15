@@ -128,6 +128,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
-# Login redirect (or success url)
+# Login/Logout redirect (or success url)
 LOGIN_REDIRECT_URL = '/blogs'
 LOGOUT_REDIRECT_URL = '/blogs'
+
+
+# Email Setting
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
