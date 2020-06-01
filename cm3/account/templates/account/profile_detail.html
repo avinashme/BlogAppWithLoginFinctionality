@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+
+{% block extra_head %}
+    <link href="{% static 'blog/css/card.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<div id="mid-section-content">
+    <div class="margin-div">
+
+        {% if user.is_authenticated %}
+            <p>Name: {{ user.username }}</p>
+            <p>Bio: {{ user.bio }}</p>
+
+            {% if user.is_author == True %}
+                <div>
+                    <h2>Your blogs:</h2>
+                    <a href="{% url 'create_post' %}"><input type="button" value="Create"></a>
+                    {% for post in posts %}
+                        <p>
+                            <a href="{% url 'detail' post.slug %}">{{ post }}</a>
+                            <a href="{% url 'update' post.slug %}"><input type="button" value="edit"></a>
+                            <a href="{% url 'delete' post.slug %}"><input type="button" value="Delete"></a>
+                        </p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% else %}
+            <p>Welcome, new user. Please log in.</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
